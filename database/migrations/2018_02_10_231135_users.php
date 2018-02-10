@@ -9,10 +9,13 @@ class Users extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->char('username', 32)->unique();
-            $table->char('email', 254)->unique();
-            $table->string('password', 512)->unique();
+            $table->integer('id', true, true)->nullable(false);
+
+            $table->char('username', 32)->unique()->nullable(false);
+            $table->char('email', 254)->unique()->nullable(false);
+            $table->string('password', 512)->unique()->nullable(false);
+            $table->tinyinteger('is_active')->default(0)->nullable(false);
+
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
