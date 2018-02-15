@@ -28,6 +28,6 @@ class SalesProducts extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('sales_product');
+        Schema::dropIfExists('sales_products');
     }
 }
