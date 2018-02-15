@@ -11,10 +11,8 @@ class UserDetails extends Migration
         Schema::create('user_details', function (Blueprint $table) {
             $table->integer('id', true)->unsigned()->nullable(false);
 
-            $table->unsignedinteger('user_id', false)->nullable(false);
-            $table->unsignedinteger('role_id', false)->nullable(false);
-            $table->unique('user_id');
-            $table->unique('role_id');
+            $table->unsignedinteger('user_id')->nullable(false);
+            $table->unsignedinteger('role_id')->nullable(false);
 
             $table->char('name', 128)->nullable(false);
             $table->char('imageurl', 128)->nullable(false)->default('/upload/img/user_default.png');
@@ -22,7 +20,6 @@ class UserDetails extends Migration
             $table->date('birthday')->nullable();
 
             $table->softDeletes();
-            $table->rememberToken();
             $table->timestamps();
 
             $table->engine      = 'InnoDB';
