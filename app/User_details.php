@@ -10,7 +10,7 @@ class User_details extends Model
     use SoftDeletes;
     
     protected $fillabble    = [
-        'user_id', 'name', 'birthday', 'gender', 'role_id', 'imageurl'
+        'user_id', 'name', 'birthday', 'gender', 'imageurl'
     ];
 
     public function users()

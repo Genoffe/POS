@@ -14,6 +14,8 @@ class Users extends Migration
             $table->char('username', 32)->unique()->nullable(false);
             $table->char('email', 254)->unique()->nullable(false);
             $table->string('password', 512)->unique()->nullable(false);
+
+            $table->unsignedinteger('role_id')->nullable(false);
             $table->tinyinteger('is_active')->default(0)->nullable(false);
 
             $table->softDeletes();

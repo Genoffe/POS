@@ -12,7 +12,6 @@ class UserDetails extends Migration
             $table->integer('id', true)->unsigned()->nullable(false);
 
             $table->unsignedinteger('user_id')->nullable(false);
-            $table->unsignedinteger('role_id')->nullable(false);
 
             $table->char('name', 128)->nullable(false);
             $table->char('imageurl', 128)->nullable(false)->default('/upload/img/user_default.png');

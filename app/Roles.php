@@ -17,4 +17,9 @@ class Roles extends Model
     {
         return $this->hasMany('App\Users', 'role_id');
     }
+
+    public function role_menu()
+    {
+        return $this->hasMany('App\Role_menu', 'role_id');
+    }
 }
