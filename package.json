@@ -19,6 +19,7 @@
         "vue": "^2.5.7"
     },
     "dependencies": {
+        "bootstrap-vue": "^2.0.0-rc.1",
         "jshint": "^2.9.5",
         "vue-router": "^3.0.1"
     }
